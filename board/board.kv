@@ -1,0 +1,101 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+#: import Slide board.slide.slide.Slide
+#: import Dot board.dot.dot.Dot
+#: import ButtonStart board.button.button.ButtonStart
+
+<Board>:
+
+    name: 'board'
+
+    md_bg_color: get_color_from_hex('#FFFFFF')
+
+    MDBoxLayout:
+
+        orientation: 'vertical'
+
+        size_hint_y: .8
+        pos_hint: {'top': 1}
+
+        MDCarousel:
+
+            on_slide_complete: root.on_slide_complete(self)
+
+            Slide:
+                source: 'assets/board/slide_1.png' # Картинка меня
+                text: 'Приветствую тебя, Бека'
+
+                #color_box: get_color_from_hex('#FFAAA6')
+                #color_image: get_color_from_hex('#DCEDC2')
+                #color_label: get_color_from_hex('#00ADB5')
+
+            Slide:
+                source: 'assets/board/slide_2.png'  # Картинка цветов
+                text: 'Поздравляю тебя с Международным Женским Днём Дамочки-Хулиганочки'
+
+            Slide:
+                source: 'assets/board/slide_3.png'  # Картинка галактики
+                text: 'Параллельные вселенные не дремлют и сочиняют про нас истории'
+
+            Slide:
+                source: 'assets/board/slide_4.png'  # ...
+                text: 'Одна из них сегодня попала ко мне в руки и я решил ею с тобой поделиться'
+
+            Slide:
+                source: 'assets/board/slide_5.png'  # ...
+                text: 'Подари Димасику улыбку, если он сейчас рядом с тобой'
+
+            Slide:
+                source: 'assets/board/slide_6.png'  # ...
+                text: 'Спасибо, мне очень приятно. Теперь, давай, перейдём к истории...'
+
+        MDBoxLayout:
+
+            id: box_dots
+
+            orientation: 'horizontal'
+            spacing: '8dp'
+
+            adaptive_size: True
+
+            pos_hint: {'center_x': .5}
+
+            #md_bg_color: get_color_from_hex('#010101')
+
+            Dot:
+                index: 0
+
+                size: ['6dp', '6dp']
+                md_bg_color: get_color_from_hex('#0ECBCD')
+
+            Dot:
+                index: 1
+                md_bg_color: get_color_from_hex('#BABABA')
+
+            Dot:
+                index: 2
+                md_bg_color: get_color_from_hex('#BABABA')
+
+            Dot:
+                index: 3
+                md_bg_color: get_color_from_hex('#BABABA')
+
+            Dot:
+                index: 4
+                md_bg_color: get_color_from_hex('#BABABA')
+
+            Dot:
+                index: 5
+                md_bg_color: get_color_from_hex('#BABABA')
+
+    MDFloatLayout:
+
+        orientation: 'vertical'
+
+        size_hint_y: .2
+
+        md_bg_color: get_color_from_hex('#FFFFFF')
+
+        ButtonStart:
+
+            id: button

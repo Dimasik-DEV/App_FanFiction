@@ -1,0 +1,37 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<Card>:
+
+    orientation: 'vertical'
+    #padding: '5dp'
+
+    size_hint: (.8, .4)  # По оси 'x' занимает 80% от экрана, по оси 'y' занимает 40% от экрана
+    radius: [20, 20]
+
+    pos_hint: {"center_x": .5, "center_y": .5}
+
+    ripple_behavior: True  # Пульсация при нажатии
+
+    md_bg_color: get_color_from_hex('#FFAAA6')
+
+    on_release: root.open()
+
+    MDRelativeLayout:
+
+        orientation: 'vertical'
+
+        FitImage:
+
+            source: 'assets/card/cover.png'
+
+            size_hint_y: .6
+            radius: [20, 20]
+
+            pos_hint: {'top': 1}
+
+        MDLabel:
+
+            text: 'Название'
+            font_size: 16
+            md_bg_color: get_color_from_hex('#FFD3B5')
+            pos_hint: {'top': 1}

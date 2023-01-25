@@ -1,0 +1,25 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<Theme>:
+
+    name: 'theme'
+    md_bg_color: get_color_from_hex('#FCE38A')
+
+    MDBoxLayout:
+
+        orientation: 'vertical'
+
+        MDTopAppBar:
+
+            title: 'Тема'
+            anchor_title: 'left'
+
+            left_action_items:  [['chevron-left', root.callback]]
+
+            # specific_text_color: get_color_from_hex('#355C7D')
+            # md_bg_color: get_color_from_hex('#C06C84')
+
+        MDLabel:
+
+            text: 'Тема'
+            halign: 'center'

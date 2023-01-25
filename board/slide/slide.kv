@@ -1,0 +1,30 @@
+<Slide>:
+
+    orientation: 'vertical'
+
+    padding: [20, 20, 20, 10]
+    spacing: '10dp'
+
+    md_bg_color: root.color_box
+
+    FitImage:
+
+        source: root.source
+
+        size_hint_y: .8
+        radius: [20, 20]
+
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+        md_bg_color: root.color_image
+
+    MDLabel:
+
+        text: root.text
+        bold: True
+
+        size_hint_y: .2
+
+        halign: 'center'
+
+        md_bg_color: root.color_label

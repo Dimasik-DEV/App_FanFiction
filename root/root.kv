@@ -1,0 +1,31 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+#: import History history.history.History
+#: import Setting setting.setting.Setting
+
+<Root>:
+
+    name: 'root'
+
+    MDBottomNavigation:
+
+        panel_color: get_color_from_hex('#87DFD6')
+        text_color_active: get_color_from_hex('#65384D')
+
+        MDBottomNavigationItem:
+
+            name: 'history'
+
+            text: 'Истории'
+            icon: 'book-open-page-variant-outline'
+
+            History:
+
+        MDBottomNavigationItem:
+
+            name: 'setting'
+
+            text: 'Параметры'
+            icon: 'cog-outline'
+
+            Setting:

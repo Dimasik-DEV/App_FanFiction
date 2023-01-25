@@ -1,0 +1,63 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+
+<General>:
+
+    name: 'general'
+
+    MDBoxLayout:
+
+        orientation: 'vertical'
+
+        MDTopAppBar:
+
+            title: 'Параметры'
+            anchor_title: 'left'
+
+            # specific_text_color: get_color_from_hex('#355C7D')
+            # md_bg_color: get_color_from_hex('#C06C84')
+            # elevation: 2
+            # shadow_color: get_color_from_hex('#C06C84')
+
+        MDScrollView:
+
+            MDList:
+
+                md_bg_color: get_color_from_hex('#C06C84')
+                padding: [10, 10]
+
+                TwoLineRightIconListItem:
+
+                    name: 'theme'
+                    text: 'Тема'
+                    secondary_text: 'Тёмная'
+
+                    # divider: 'Inset' # 'Full', 'None'
+                    # divider_color:
+                    # bg_color: get_color_from_hex('#C06C84')
+                    on_release: root.callback(self.name)
+
+                    IconRightWidgetWithoutTouch:
+
+                        icon: 'chevron-right'
+                        # halign: 'right'
+                        # padding: [70, 0, 0, 0]
+                        # md_bg_color: get_color_from_hex('#A8D8EA')
+                        # theme_icon_color: 'Custom'
+                        icon_color: get_color_from_hex('#F08A5D')
+
+                TwoLineRightIconListItem:
+
+                    name: 'view'
+                    text: 'Вид'
+                    secondary_text: 'Сетка'
+
+                #OneLineRightIconListItem:
+
+                #    name: 'update'
+                #    text: 'Обновление'
+
+                #OneLineRightIconListItem:
+
+                #    name: 'developer'
+                #    text: 'О разработчике'

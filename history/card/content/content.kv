@@ -1,0 +1,30 @@
+MDBoxLayout:
+
+    id: box
+    orientation: 'vertical'
+    size_hint_y: .4
+
+    MDLabel:
+        text: 'Название'
+        #padding: [0, 0]
+        font_size: 16
+        #pos_hint: {'top': 1}
+        #size_hint_y: .1
+        #adaptive_height: True
+        md_bg_color: get_color_from_hex('#FFD3B5')
+
+    MDLabel:
+        text: 'Описание'
+        theme_text_color: 'Secondary'
+        font_size: 14
+        #size_hint_y: .1
+        #pos_hint: {'top': 1}
+        #adaptive_height: True
+        md_bg_color: get_color_from_hex('#00ADB5')
+
+    MDFillRoundFlatButton:
+        text: "Читать"
+        font_size: 12
+        text_color: '#ffffff'
+        md_bg_color: '#9c4146'
+        width: '100dp'
